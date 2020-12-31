@@ -1,0 +1,815 @@
+  /* banner */
+  .ow-banner {
+    height: 550px;
+    position: relative;
+    color: #fff;
+  }
+  
+  .ow-banner .banner-box {
+    width: 100%;
+    height: 550px;
+  }
+
+  .ow-banner .banner-box img {
+      width: 100%;
+      height: 550px;
+  }
+
+  .ow-banner .hz-b-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    transition: all .5s;
+    /* background-image: url(../images/banner01.png); */
+    background-size: 100% 100%;
+    z-index: 10;
+  }
+  
+  .ow-banner .hz-b-box .hz-b-img {
+    width: 880px;
+  }
+  .hz-b-box .hz-b-img > img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .ow-banner .hz-b-box:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .4);
+    z-index: 2;
+  }
+  
+  .ow-banner .hz-b-box > div {
+    width: 100%;
+    text-align: center;
+    z-index: 5;
+  }
+  
+  .ow-banner .hz-b-zh {
+    width: 100%;
+    font-size: 60px;
+    font-weight: 400;
+    margin: 20px;
+    margin-bottom: -5px;
+    letter-spacing: 9px;
+    font-size: 45px;
+  }
+  
+  .ow-banner .hz-b-cn {
+    font-size: 20px;
+    margin-bottom: 10px;
+    letter-spacing: 2.5px;
+  }
+  
+  .ow-banner .hz-b-btn {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .ow-banner .hz-b-btn > div {
+    padding: 5px 15px;
+    border: 1px solid #fff;
+    font-size: 18px;
+    width: fit-content;
+    cursor: pointer;
+    transition: all .5s;
+    border-radius: 55px;
+    letter-spacing: 2px;
+  }
+  
+  .ow-banner .hz-b-btn > div:hover {
+    border-color: transparent;
+    color: #77797b;
+    background-color: #fff;
+  }
+
+  /* 产品中心 */
+  .hz-product {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 40px 0;
+    box-sizing: border-box;
+    background-color: #fff;
+    position: relative;
+  }
+  
+  .hz-product > a {
+    position: absolute;
+    bottom: 0px;
+    display: inline-block;
+    height: 70px; 
+    width: 1100px;
+    background-color: transparent;
+  }
+  
+  .hz-product .hz-unified {
+    width: 1100px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .hz-product .hz-p-title {
+    text-align: center;
+    width: 100%;
+    font-size: 33px;
+    color: #333;
+    padding-bottom: 20px;
+    border-bottom: 1px dashed #999;
+  }
+  
+  .hz-product .hz-p-cn {
+    width: 100%;
+    text-align: center;
+    margin: 10px 0;
+    color: #444;
+    margin-bottom: 30px;
+    font-size: 16px;
+    letter-spacing: 1px;
+  }
+  
+  .hz-product .hz-p-list {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    /* margin-top: 20px; */
+  }
+  
+  .hz-product .hz-p-list .hz-p-single {
+    width: calc(20% - 10px);
+    background-color: #ebebeb;
+    border-radius: 15px;
+    box-shadow: 1px 1px 5px 1px #eee;
+    margin: 0 5px;
+    box-sizing: border-box;
+    padding: 10px;
+    cursor: pointer;
+    box-sizing: border-box;
+    color: #333;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    transition: all .5s;
+  }
+  
+  .hz-p-list .hz-p-single .hz-ps-icon {
+    margin: 0 auto;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-image: url(../assets/images/manage.png);
+    background-size: 100% 100%;
+    transition: all .5s;
+  }
+  
+  /* .hz-prog .hz-prog .hz-p-list .hz-p-single:hover .hz-ps-icon {
+    background-color: #8191a0;
+    background-image: url(../images/manage.png);
+  } */
+  
+  .hz-product .hz-p-list .hz-p-single:hover .hz-ps-btn {
+    background-color: #fff;
+    color: #3887cc;
+  }
+  
+  .hz-product .hz-p-list .hz-p-single:hover {
+    background-color: #3887cc;
+    color: #fff;
+    box-shadow: 1px 1px 5px 1px #7db6e9;
+  }
+  
+  .hz-product .hz-p-single {
+    width: 23%;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    cursor: pointer;
+  }
+
+  .hz-product .hz-p-single .hz-ps-title {
+    width: 100%;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 15px;
+  } 
+
+  .hz-product .hz-p-single .hz-ps-centent {
+    text-indent: 2em;
+    height: 70px;
+    font-size: 12px;
+    /* letter-spacing: .6px; */
+    line-height: 1.5em;
+    margin-top: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    line-clamp: 4;
+    -webkit-box-orient: vertical;
+  }
+  
+  .hz-product .hz-p-single .hz-ps-btn {
+    display: inline-block;
+    padding: 4px 8px;
+    background-color: #dddcdc;
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin-top: 15px;
+    margin-bottom: 0;
+  }
+
+  .hz-s-btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    z-index: 200;
+  }
+  
+  .hz-s-btn div {
+    width: 120px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    box-sizing: border-box;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all .5s;
+    background-color: #e6a23c;
+    margin: 0 40px;
+    border-radius: 11115px;
+  }
+  
+  .hz-s-btn div:nth-last-child(1) {
+    background-color: #5a9bd5;
+  }
+  
+  .hz-s-btn div:hover {
+   opacity: .7;
+  }
+
+  /* 应用方案 */
+.hz-prog {
+    width: 100%;
+    padding: 40px 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    background-color: #f5f5f5;
+    position: relative;
+  }
+  
+  .hz-prog > a {
+    position: absolute;
+    bottom: 0px;
+    display: inline-block;
+    height: 70px; 
+    width: 1100px;
+    background-color: transparent;
+  }
+  
+  .hz-prog .hz-unified {
+    width: 1100px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .hz-prog .hz-p-title {
+    text-align: center;
+    width: 100%;
+    font-size: 33px;
+    color: #333;
+    padding-bottom: 20px;
+    border-bottom: 1px dashed #999;
+  }
+  
+  .hz-prog .hz-p-cn {
+    width: 100%;
+    text-align: center;
+    margin: 10px 0;
+    color: #444;
+    margin-bottom: 20px;
+    font-size: 16px;
+    letter-spacing: 1px;
+  }
+  
+  .hz-prog .hz-p-list {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .hz-prog .hz-p-list .hz-p-single {
+    width: calc(20% - 10px);
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 1px 1px 5px 1px #eee;
+    margin: 0 5px;
+    box-sizing: border-box;
+    padding: 10px;
+    cursor: pointer;
+    box-sizing: border-box;
+    color: #333;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    transition: all .5s;
+  }
+  
+  .hz-p-list .hz-p-single .hz-ps-icon {
+    margin: 0 auto;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-image: url(../assets/images/manage.png);
+    background-size: 100% 100%;
+    transition: all .5s;
+  }
+  
+  /* .hz-prog .hz-prog .hz-p-list .hz-p-single:hover .hz-ps-icon {
+    background-color: #8191a0;
+    background-image: url(../images/manage.png);
+  } */
+  
+  .hz-prog .hz-p-list .hz-p-single:hover .hz-ps-btn {
+    background-color: #fff;
+    color: #3887cc;
+  }
+  
+  .hz-prog .hz-p-list .hz-p-single:hover {
+    background-color: #3887cc;
+    color: #fff;
+    box-shadow: 1px 1px 5px 1px #7db6e9;
+  }
+  
+  .hz-p-list .hz-p-single .hz-ps-title {
+    width: 100%;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 15px;
+  } 
+  
+  .hz-p-list .hz-p-single .hz-ps-centent {
+    text-indent: 2em;
+    height: 70px;
+    font-size: 12px;
+    /* letter-spacing: .6px; */
+    line-height: 1.5em;
+    margin-top: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    line-clamp: 4;
+    -webkit-box-orient: vertical;
+  }
+  
+  .hz-p-list .hz-p-single .hz-ps-btn {
+    display: inline-block;
+    padding: 4px 8px;
+    background-color: #dddcdc;
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin-top: 15px;
+    margin-bottom: 0;
+  }
+
+  /* 云平台 */
+.hz-cloud {
+    width: 100%;
+    padding: 40px 0;
+    background-color: #fff;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .hz-cloud .hz-unified {
+    width: 1100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .hz-cloud .hz-c-title {
+    text-align: center;
+    width: 100%;
+    font-size: 33px;
+    padding-bottom: 20px;
+    border-bottom: 1px dashed #ccc;
+  }
+  
+  .hz-cloud .hz-c-explain {
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: #333;
+  }
+  
+  .hz-cloud .hz-c-list {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .hz-cloud .hz-c-list .hz-cl-single {
+    width: 22%;
+    text-align: center;
+    margin-top: 30px;
+    cursor: pointer;
+  }
+  
+  .hz-cloud .hz-c-list .hz-cl-single img {
+    /* width: 80%;
+    height: auto; */
+  }
+  
+  .hz-cloud .hz-c-smart {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .hz-cloud .hz-c-smart > img {
+    margin: 0 auto;
+    margin-top: 30px;
+    width: 73%;
+    height: auto;
+  }
+  
+  .hz-cloud .hz-c-list .hz-cl-single:hover .hz-cl-icon {
+    background-color: #c2c8ce;
+  }
+  
+  .hz-c-list .hz-cl-single .hz-cl-icon {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    transition: background-color .5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .hz-c-list .hz-cl-single .hz-cl-title {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    width: 100%;
+    font-size: 15px;
+    color: #333;
+    letter-spacing: 1px;
+  }
+  
+  .hz-c-list .hz-cl-single .hz-cl-detail {
+    color: #999;
+    line-height: 1.5em;
+    letter-spacing: 1px;
+    font-size: 13px;
+  }
+  
+  .hz-cloud .hz-c-more {
+    padding: 3px 8px;
+    margin-top: 40px;
+    box-sizing: border-box;
+    font-size: 15px;
+    color: #999;
+    cursor: pointer;
+    border: 1px solid #999;
+    transition: all .5s;
+  }
+  
+  .hz-cloud .hz-c-more:hover {
+    background-color: #999;
+    color: #fff;
+  }
+
+  /* 系统架构 */
+  .hz-framework {
+    width: 100%;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    padding: 40px 0;
+    box-sizing: border-box;
+    position: relative;
+    /* background-size: 100% 100%;
+    background-image: url(../images/centent.png); */
+  }
+  
+  .hz-framework > a {
+    position: absolute;
+    bottom: -10px;
+    display: inline-block;
+    height: 70px; 
+    width: 1100px;
+    background-color: transparent;
+  }
+  
+  .hz-framework .hz-unified {
+    width: 1100px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .hz-framework .hz-f-title {
+    text-align: center;
+    width: 100%;
+    font-size: 33px;
+    color: #333;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #ccc;
+  }
+  
+  .hz-framework .hz-f-cn {
+    width: 100%;
+    text-align: center;
+    margin: 10px 0;
+    color: #666;
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+  
+  .hz-framework .hz-f-icon {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #333;
+    font-size: 12px;
+  }
+  
+  .hz-framework .hz-f-icon .hz-fi-single {
+    display: flex;
+    align-items: center; 
+    color: #333;
+  }
+  
+  .hz-f-icon .hz-fi-single .hz-fis-img {
+    width: 25px;
+    height: 25px;
+    background-color: #336e9a;
+    border-radius: 50%;
+    padding: 5px;
+    box-sizing: border-box;
+    margin-right: 5px;
+  }
+  
+  .hz-fi-single .hz-fis-img > img {
+    width: 100%;
+    height: 100%;
+    /* border-radius: 50%; */
+  }
+  
+  
+  .hz-framework img {
+    width: auto;
+    height: 473px;
+    margin: 0 auto;
+  }
+
+  /* 软件使用数据 */
+  .hz-use {
+    display: flex;
+    width: 100%;
+    padding: 40px 0;
+    /* background-image: url('../images/bgi01.png'); */
+    background-size: 100% 100%;
+    background-color: #fff;
+    /* display: flex; */
+    justify-content: center;
+    color: #333 !important;
+    /* flex-wrap: wrap; */
+    position: relative;
+  }
+  
+  .hz-use > a {
+    position: absolute;
+    bottom: 0px;
+    display: inline-block;
+    height: 70px; 
+    width: 1100px;
+    background-color: transparent;
+  }
+  
+  .hz-use .hz-unified {
+    width: 1100px;
+    /* display: flex; */
+    flex-wrap: wrap;
+  }
+  
+  .hz-use .hz-c-title {
+    text-align: center;
+    width: 100%;
+    font-size: 33px;
+    /* color: #fff; */
+    padding-bottom: 20px;
+    border-bottom: 1px dashed #333;
+  }
+  
+  .hz-use .hz-c-cn {
+    width: 100%;
+    text-align: center;
+    margin: 10px 0;
+    /* color: rgba(255, 255, 255, 0.808); */
+    margin-bottom: 20px;
+    font-size: 16px;
+  }
+  
+  .hz-use .hz-use-user {
+    width: 100%;
+    /* height: 500px; */
+    display: flex;
+    justify-content: flex-start;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    /* background-color: orangered; */
+  }
+  
+  .hz-use .hz-use-user > img {
+    width: calc(20% - 20px);
+    height: 100px;
+    margin: 10px;
+    box-shadow: 4px 4px 10px 0px #ccc;
+  }
+
+  /* 留下联系方式 */
+  .hz-leave {
+    width: 100%;
+    background-image: url(../assets/images/02.png);
+    background-size: 100% 100%;
+    padding: 80px 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .hz-leave .hz-unified {
+    width: 1100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    letter-spacing: 1px;
+  }
+  
+  .hz-leave .hz-l-title {
+    width: 100%;
+    text-align: center;
+    letter-spacing: 5px;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #fff;
+  }
+  
+  .hz-leave .hz-l-phone {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 5px;
+    color: #1863e6;
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  .hz-leave .hz-l-list {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    color: #fff;
+    font-size: 18px;
+  }
+  
+  .hz-leave .hz-l-list > div {
+    padding: 0 15px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+  }
+  
+  .hz-leave .hz-l-list > div {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  
+  .hz-leave .hz-l-list > div > img {
+    height: 20px;
+    width: auto;
+    margin-right: 10px;
+  }
+  
+  .hz-leave .hz-l-tap {
+    width: 100%;
+    margin-top: 70px;
+    text-align: center;
+    letter-spacing: 5px;
+    color: #fff;
+    font-size: 22px;
+  }
+  
+  .hz-leave .hz-l-input {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 50px;
+    margin-top: 30px;
+    justify-content: center;
+  }
+  
+  .hz-leave .hz-l-input input {
+    width: 300px;
+    height: 100%;
+    border: 1px solid #fff;
+    box-sizing: border-box;
+    padding: 15px;
+    color: #fff;
+    letter-spacing: 2px;
+    font-size: 16px;
+    background-color: #2d3c4c67;
+  }
+  
+  .hz-leave .hz-l-input .hz-li-btn {
+    width: 120px;
+    text-align: center;
+    line-height: 48px;
+    color: #fff;
+    letter-spacing: 10px;
+    font-size: 16px;
+    background-color: #2b6cdb;
+    border: 1px solid #fff;
+    border-left: none;
+    cursor: pointer;
+    box-sizing: border-box;
+  }
+  
+  .hz-l-input input::-webkit-input-placeholder {
+    color: rgb(223, 223, 223);
+    letter-spacing: 2px;
+  }
+  .hz-l-input input:-moz-placeholder {
+    color: rgb(223, 223, 223);
+    letter-spacing: 2px;
+  }
+  .hz-l-input input:-ms-input-placeholder {
+    color: rgb(223, 223, 223);
+    letter-spacing: 2px;
+  }
+
+  /* 信息 */
+  .hz-msg {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+  }
+  
+  .hz-msg .hz-unified {
+    width: 700px;
+    display: flex;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+  }
+  
+  .hz-msg .hz-m-single {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 30px;
+    color: #444;
+    font-size: 14px;
+  }
+  
+  .hz-msg .hz-m-single > img {
+    height: 100%;
+    width: auto;
+    margin-right: 10px;
+  }

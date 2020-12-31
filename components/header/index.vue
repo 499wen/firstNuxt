@@ -1,21 +1,107 @@
 <template>
-  <div>
+  <div class="header">
     <div class="header-ow">
+      <!-- logo -->
+      <div class="logo">
+        <img src="https://www.hzics.com/images/logo%20(1).png" alt="">
+      </div>
+
+      <!-- 列表 -->
       <a-anchor
         :wrapperClass="'top'"
-        @change="anchorChange"
+        @change="anchorChange" 
         :affix="false"
+        :offsetTop='70' 
         @click="anchorClick"
         :showInkInFixed="false"
-        :getContainer="getContainer"
-        :getCurrentAnchor="getCurrentAnchor"
       >
         <a-anchor-link
           :href="item.href" :title="item.title" :class="['bg', item.is_select && 'select']"
           v-for="(item, idx) in headerNav" :key="idx" >
+
+          <!-- 下拉样式 -->
+          <div class="options" v-if="item.child">
+                        <div class="sub-left">
+          <div>
+            <span @click="detail('id')" onclick="productLink(event, 'bu6of6jrm5p3643esfh0')">1. 邀请报名管理系统</span>
+            <ul class="children">
+              <li onclick="productLinkDetail(event, 'btgbbqm8msqas5c8s5ug')">H5会议邀请报名管理系统</li>
+            </ul>
+          </div>
+          
+          <div>
+            <span onclick="productLink(event, 'bv095qhok2ppotfvg2l0')">4. 人脸识别签到管理系统</span>
+            <ul class="children">
+              <li onclick="productLinkDetail(event, 'butqbo68msqf201tnpd0')">人脸识别签到系统</li>
+            </ul>
+          </div>
+          
+          <div>
+            <span onclick="productLink(event, 'bu7950brm5p3v82tfk20')">7. 会议就餐管理系统</span>
+            <ul class="children">
+              <li onclick="productLinkDetail(event, 'butqlu68msqf201tnpe0')">会议餐饮管理系统</li>
+            </ul>
+          </div>
+          
+          <div>
+            <span onclick="productLink(event, 'buvmenhok2psbrn2ag70')">10. 信息通知管理系统</span>
+            <ul class="children">
+              <li onclick="productLinkDetail(event, 'bv08aa9ok2ppotfvg2j0')">短信通知管理系统</li><li onclick="productLinkDetail(event, 'bv08am9ok2ppotfvg2jg')">短信收费管理系统</li><li onclick="productLinkDetail(event, 'bv092o9ok2ppotfvg2kg')">邮件通知管理系统</li>
+            </ul>
+          </div>
+          </div><div class="right">
+            <div>
+              <span onclick="productLink(event, 'buv4291ok2po3oasg6ag')">2. 二维码签到管理系统</span>
+              <ul class="children">
+                <li onclick="productLinkDetail(event, 'bukhq1e8msqf201tno00')">二维码签到管理系统</li>
+              </ul>
+            </div>
+            
+            <div>
+              <span onclick="productLink(event, 'bur6ok68msqf201tnp3g')">5. 会议住宿管理系统</span>
+              <ul class="children">
+                <li onclick="productLinkDetail(event, 'butqjn68msqf201tnpdg')">会议住宿管理系统</li>
+              </ul>
+            </div>
+            
+            <div>
+              <span onclick="productLink(event, 'bur6p4u8msqf201tnp4g')">8. 会议用车管理系统</span>
+              <ul class="children">
+                <li onclick="productLinkDetail(event, 'butqmke8msqf201tnpeg')">会议用车管理系统</li>
+              </ul>
+            </div>
+            </div><div class="three">
+            <div>
+              <span onclick="productLink(event, 'btfjj008dmd26634sctg')">3. 证卡签到管理系统</span>
+              <ul class="children">
+                <li onclick="productLinkDetail(event, 'bth25568msqcjpissh6g')">通道式无感签到系统</li><li onclick="productLinkDetail(event, 'butnktm8msqf201tnp80')">手持移动签到系统</li><li onclick="productLinkDetail(event, 'butpt068msqf201tnpa0')">立柜式签到系统</li><li onclick="productLinkDetail(event, 'bukkf5m8msqf201tno5g')">桌面安卓签到系统</li>
+              </ul>
+            </div>
+            
+            <div>
+              <span onclick="productLink(event, 'buv3k21ok2po3oasg690')">6. 会议室预约管理系统</span>
+              <ul class="children">
+                <li onclick="productLinkDetail(event, 'buodm6e8msqf201tnotg')">会议室预约管理系统</li><li onclick="productLinkDetail(event, 'bv08cphok2ppotfvg2k0')">会议室预订收费管理系统</li>
+              </ul>
+            </div>
+            
+            <div>
+              <span onclick="productLink(event, 'bukmjtu8msqf201tnogg')">9. 无纸化会议管理系统</span>
+              <ul class="children">
+                <li onclick="productLinkDetail(event, 'buvqntpok2ppotfvg2g0')">会议议程管理系统</li><li onclick="productLinkDetail(event, 'bv088b9ok2ppotfvg2ig')">会议文档管理系统</li><li onclick="productLinkDetail(event, 'buvqonhok2ppotfvg2gg')">无纸化表决系统</li><li onclick="productLinkDetail(event, 'buvqpo9ok2ppotfvg2hg')">无纸化投票管理系统</li>
+              </ul>
+            </div>
+            </div>
+          </div>
         </a-anchor-link>
         <a-anchor-link href="" title="会务平台-SmartMeeting" class="bg special" />
       </a-anchor>
+
+      <!-- 电话 -->
+      <div class="phone">
+        <img src="https://www.hzics.com/images/phone.png" class="mobile" alt="">
+        <span>13925067111</span>
+      </div>
     </div>
 
     <div style="width: 100%; height: 70px"></div>
@@ -23,102 +109,11 @@
 </template>
 
 <script>
-export default {
-  props: ["getContainer", "getCurrentAnchor"],
-  data() {
-    return {
-      headerNav: [
-        { href: "#index", title: "首页-Home", is_select: true },
-        { href: "#product", title: "产品方案-Product", is_select: false },
-        { href: "#solution", title: "应用方案-Solution", is_select: false },
-      ],
-    };
-  },
-  methods: {
-    anchorChange(data) {
-      console.log(data);
-      if (data) {
-        this.headerNav.filter((item) =>
-          data == item.href ? (item.is_select = true) : (item.is_select = false)
-        );
-      }
-    },
-    anchorClick(node, link) {
-      console.log(link);
-    },
-  },
-};
+import Index from './index'
+
+export default Index
 </script>
 
 <style>
-.header-ow {
-  width: 100%;
-  min-width: 1250px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #f5f5f5;
-  height: 70px;
-  /* box-shadow: 1px 1px 10px 1px #fff; */
-  box-sizing: border-box;
-  position: fixed;
-  top: 0;
-  left: 0;
-}
-
-.top {
-  width: 100%;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  justify-content: flex-start;
-}
-
-.top .ant-anchor {
-  width: 100%;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-.bg {
-  padding: 15px 0;
-  width: 100px;
-  height: 70px;
-  margin-right: 10px;
-  box-sizing: border-box;
-  cursor: pointer;
-  text-align: center;
-  transition: all 0.3s;
-  font-size: 15px;
-}
-
-.bg:hover {
-  background-color: #34495e;
-}
-
-.bg:hover .ant-anchor-link-title {
-  color: #fff;
-}
-
-.select {
-  /* background-color: #b8232c; */
-  background-color: #34495e;
-}
-
-.special {
-  background-color: #b8232c;
-}
-
-.special .ant-anchor-link-title {
-  color: #fff;
-}
-
-.select .ant-anchor-link-title {
-  color: #fff;
-}
-
-.top .ant-anchor-ink {
-  display: none;
-}
+@import url(./index.css);
 </style>
