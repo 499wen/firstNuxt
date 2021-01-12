@@ -20,7 +20,9 @@ export default {
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
     '@/plugins/antd-ui',
-    '@/plugins/time'
+    '@/plugins/time',
+    '@/plugins/api',
+    '@/plugins/http'
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)

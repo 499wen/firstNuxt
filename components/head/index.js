@@ -15,14 +15,21 @@ export default {
           { href: "#about", title: "关于我们-About", is_select: false, url: '/about', child: false },
         ],
       };
-    },
+    }, 
     methods: {
-        // 点击详情 
-        detail(id){
-            
-        },
-      anchorChange(data) {
-        console.log(data);
+      // 点击详情 
+      detail(showHerf, id){
+        this.$router.push({path: '/detail', query: {
+          is_select: showHerf
+        }})
+      },
+      // 点击进入 描述
+      description(showHerf, id){
+        this.$router.push({path: '/detail/' + id, query: {
+          is_select: showHerf
+        }})
+      },
+      anchorChange(data) { 
         if(data == '#about'){
           this.$router.push('/about')
         } else if(data){
@@ -33,7 +40,6 @@ export default {
         }
       },
       anchorClick(e, link) {
-        console.log(e,  link);
         if(link == '#about')
           this.headerNav.filter(item => item.url == '/about' ? item.is_select = true : item.is_select = false)
       }, 
@@ -44,8 +50,14 @@ export default {
       }
     },
     created(){
-      var path = this.$route.path
-      if(path == '/about')
-        this.headerNav.filter(item => item.url == '/about' ? item.is_select = true : item.is_select = false)
+      console.log(this.$route.path)
+      var path = this.$route.path, param = null
+
+      if(path == '/about'){
+        this.headerNav.filter(item => item.url == '/about' ? item.is_select = true : item.is_select = false)   
+      } else if(path.indexOf('detail') > -1) {
+        param = this.$route.query.is_select
+        this.headerNav.filter(item => item.href == param ? item.is_select = true : item.is_select = false)   
+      }
     }
   };

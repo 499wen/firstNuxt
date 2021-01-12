@@ -274,4 +274,38 @@ input[type='text'] {
 .hz-s-box .hz-sb-single .qq:hover {
   color: #1863e6;
 }
+
+/* 信息 */
+.hz-msg {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+}
+
+.hz-msg .hz-unified {
+  width: 700px;
+  display: flex;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.hz-msg .hz-m-single {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 30px;
+  color: #444;
+  font-size: 14px;
+}
+
+.hz-msg .hz-m-single > img {
+  height: 100%;
+  width: auto;
+  margin-right: 10px;
+}
 </style>

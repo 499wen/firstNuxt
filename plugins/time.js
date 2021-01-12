@@ -37,4 +37,3 @@ function formatDate(date, complete = false, chinese = false) {
 }
 
 Vue.prototype.selfTime = formatDate
-// export default formatDate
