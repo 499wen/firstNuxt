@@ -16,7 +16,7 @@
         <div class="hz-b-btn">
           <div>免费使用</div>
         </div>
-      </div>
+      </div> 
 
       <a-carousel autoplay effect="fade" :dots="false">
         <div class="banner-box" v-for='(item, idx) in banner' :key="idx">
@@ -33,14 +33,11 @@
 
           <div class="hz-p-list">
 
-            <div class="hz-p-single" v-for="idx in 8" :key="idx">
+            <div class="hz-p-single" v-for="(item, idx) in product" :key="idx" @click="productDetail(item)">
               <div class="hz-ps-icon"></div>
-              <div class="hz-ps-title">会议云服务后台管理系统</div>
+              <div class="hz-ps-title">{{ item.name }}</div>
               <div class="hz-ps-centent">
-                智能会议云服务后台管理系统是基于
-                JavaEE技术的企业级云平台管理系统，
-                以其安全稳定、强大易用、高效
-                专业等优势赢得了用户的广泛好评。
+                {{ item.details }}
               </div>
               <div class="hz-ps-btn">查看详情</div>
             </div>
@@ -132,10 +129,10 @@
       <!-- 软件使用数据 -->
       <div class="hz-use" id="case">
         <div class="hz-unified">
-          <div class="hz-c-title mobile-title">4000+</div>
-          <div class="hz-c-cn mobile-detail">超过40000家主办方信任并使用会务平台!</div>
+          <div class="hz-c-title mobile-title">{{ use.title }}</div>
+          <div class="hz-c-cn mobile-detail">{{ use.context }}</div>
           <div class="hz-use-user">
-            <img src="../assets/images/meetingInvitation.png" alt="">
+            <img v-for="(item, idx) in use.titlePhotos" :key="idx" :src="`/api/img/${item.id}`" alt="">
           </div>
         </div>
       </div>

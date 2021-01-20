@@ -367,6 +367,7 @@
   } 
   
   .hz-p-list .hz-p-single .hz-ps-centent {
+    width: 100%;
     text-indent: 2em;
     height: 70px;
     font-size: 12px;

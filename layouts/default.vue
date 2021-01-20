@@ -118,6 +118,15 @@ html {
 }
 
 /* 公共样式 */
+/* 禁止选中文本 */
+body{
+  -moz-user-select:none; /*火狐*/
+  -webkit-user-select:none; /*webkit浏览器*/
+  -ms-user-select:none; /*IE10*/
+  -khtml-user-select:none; /*早期浏览器*/
+  user-select:none;
+}
+
 /* 滚动条 */
 body::-webkit-scrollbar {/*滚动条整体样式*/
   width: 0px;     /*高宽分别对应横竖滚动条的尺寸*/

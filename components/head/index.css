@@ -104,6 +104,10 @@
     text-align: left;
     font-size: 16px;
     width: 200px;
+    /* display: grid;
+    grid-template-columns: repeat(3, 33.33%);
+    grid-auto-rows: auto; */
+    /* column-count: 3; */
   }
   
   .options > div > div > span:hover {

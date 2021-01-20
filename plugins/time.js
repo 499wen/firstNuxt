@@ -36,4 +36,8 @@ function formatDate(date, complete = false, chinese = false) {
     }
 }
 
-Vue.prototype.selfTime = formatDate
+// Vue.prototype.selfTime = formatDate
+
+export default ({app}, inject) => {
+    inject('selfTime', formatDate)
+}
